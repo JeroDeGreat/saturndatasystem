@@ -1,12 +1,12 @@
 :root {
-  --bg: #071116;
-  --panel: rgba(17, 29, 38, 0.74);
-  --text: #f3efe8;
-  --muted: rgba(243, 239, 232, 0.72);
-  --soft: rgba(243, 239, 232, 0.45);
-  --line: rgba(243, 239, 232, 0.12);
-  --accent: #f0a36b;
-  --accent-strong: #ffbe85;
+  --bg: #050005;
+  --panel: rgba(33, 4, 20, 0.78);
+  --text: #fff7fb;
+  --muted: rgba(255, 247, 251, 0.72);
+  --soft: rgba(255, 247, 251, 0.45);
+  --line: rgba(255, 247, 251, 0.12);
+  --accent: #ee0066;
+  --accent-strong: #ff4b99;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
   --site-width: min(1180px, calc(100vw - 2rem));
   --header-height: 84px;
@@ -29,12 +29,12 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Outfit", "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(114, 200, 220, 0.12), transparent 28%),
-    radial-gradient(circle at 80% 12%, rgba(240, 163, 107, 0.18), transparent 24%),
-    linear-gradient(180deg, #081217 0%, #071116 38%, #0a1419 100%);
+    radial-gradient(circle at top left, rgba(255, 40, 130, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(238, 0, 102, 0.2), transparent 24%),
+    linear-gradient(180deg, #020002 0%, #070005 38%, #12000a 100%);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -89,8 +89,8 @@ a {
 }
 
 .site-header.is-scrolled {
-  background: rgba(9, 18, 24, 0.82);
-  border-color: rgba(243, 239, 232, 0.08);
+  background: rgba(14, 2, 10, 0.86);
+  border-color: rgba(255, 247, 251, 0.08);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(18px);
 }
@@ -103,6 +103,13 @@ a {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 22px rgba(238, 0, 102, 0.25));
 }
 
 .site-nav {
@@ -144,9 +151,9 @@ a {
 
 .header-cta,
 .button--primary {
-  color: #121314;
-  background: linear-gradient(135deg, var(--accent-strong), #ffd4ad);
-  box-shadow: 0 18px 40px rgba(240, 163, 107, 0.25);
+  color: #fff;
+  background: linear-gradient(135deg, #ff4b99, #ee0066);
+  box-shadow: 0 18px 40px rgba(238, 0, 102, 0.28);
 }
 
 .header-cta:hover,
@@ -154,7 +161,7 @@ a {
 .header-cta:focus-visible,
 .button--primary:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 24px 50px rgba(240, 163, 107, 0.32);
+  box-shadow: 0 24px 50px rgba(238, 0, 102, 0.34);
 }
 
 .button--ghost {
@@ -166,7 +173,7 @@ a {
 .button--ghost:hover,
 .button--ghost:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(243, 239, 232, 0.24);
+  border-color: rgba(255, 247, 251, 0.24);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -186,9 +193,9 @@ a {
 
 .hero__ambient {
   background:
-    radial-gradient(circle at 14% 22%, rgba(114, 200, 220, 0.24), transparent 22%),
-    radial-gradient(circle at 82% 26%, rgba(240, 163, 107, 0.22), transparent 20%),
-    radial-gradient(circle at 50% 92%, rgba(240, 163, 107, 0.12), transparent 30%);
+    radial-gradient(circle at 14% 22%, rgba(255, 75, 153, 0.22), transparent 22%),
+    radial-gradient(circle at 82% 26%, rgba(238, 0, 102, 0.24), transparent 20%),
+    radial-gradient(circle at 50% 92%, rgba(238, 0, 102, 0.12), transparent 30%);
 }
 
 .hero__noise {
@@ -227,8 +234,9 @@ a {
 .section-title,
 .results__quote blockquote {
   margin: 0;
+  font-family: "Bebas Neue", "Sora", sans-serif;
   line-height: 0.94;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.03em;
   text-wrap: balance;
 }
 
@@ -237,8 +245,8 @@ a {
 }
 
 .hero__title span {
-  font-family: "Instrument Serif", Georgia, serif;
-  font-style: italic;
+  font-family: inherit;
+  font-style: normal;
   font-weight: 400;
   color: var(--accent-strong);
 }
@@ -300,7 +308,7 @@ a {
   border-radius: 2.4rem;
   background:
     radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(255, 255, 255, 0.1), transparent 26%),
-    linear-gradient(160deg, rgba(20, 32, 41, 0.96), rgba(8, 17, 22, 0.98));
+    linear-gradient(160deg, rgba(30, 3, 18, 0.96), rgba(6, 0, 5, 0.98));
   box-shadow: var(--shadow);
   overflow: hidden;
   transform:
@@ -331,14 +339,14 @@ a {
   inset: 6% auto auto 6%;
   width: 11rem;
   height: 11rem;
-  background: radial-gradient(circle, rgba(114, 200, 220, 0.35), transparent 65%);
+  background: radial-gradient(circle, rgba(255, 75, 153, 0.34), transparent 65%);
 }
 
 .hero-stage__glow--two {
   inset: auto 4% 12% auto;
   width: 14rem;
   height: 14rem;
-  background: radial-gradient(circle, rgba(240, 163, 107, 0.26), transparent 68%);
+  background: radial-gradient(circle, rgba(238, 0, 102, 0.3), transparent 68%);
 }
 
 .hero-stage__surface {
@@ -351,8 +359,15 @@ a {
   padding: 1.4rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 22%),
-    linear-gradient(135deg, rgba(114, 200, 220, 0.08), transparent 40%),
+    linear-gradient(135deg, rgba(255, 75, 153, 0.1), transparent 40%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0, transparent 100%);
+}
+
+.surface-logo {
+  width: min(240px, 56%);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(238, 0, 102, 0.2));
 }
 
 .hero-stage__surface::after {
@@ -389,9 +404,10 @@ a {
 
 .surface-branding h2 {
   margin: 0;
+  font-family: "Bebas Neue", "Sora", sans-serif;
   font-size: clamp(2.2rem, 4vw, 4rem);
   line-height: 1;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.03em;
 }
 
 .surface-breakdown {
@@ -562,9 +578,9 @@ a {
   border-radius: 2rem;
   border: 1px solid rgba(243, 239, 232, 0.08);
   background:
-    radial-gradient(circle at 20% 20%, rgba(240, 163, 107, 0.18), transparent 20%),
-    radial-gradient(circle at 80% 72%, rgba(114, 200, 220, 0.2), transparent 24%),
-    linear-gradient(160deg, rgba(18, 30, 38, 0.92), rgba(7, 17, 22, 0.98));
+    radial-gradient(circle at 20% 20%, rgba(255, 75, 153, 0.2), transparent 20%),
+    radial-gradient(circle at 80% 72%, rgba(238, 0, 102, 0.18), transparent 24%),
+    linear-gradient(160deg, rgba(28, 2, 17, 0.94), rgba(6, 0, 5, 0.98));
   box-shadow: var(--shadow);
 }
 
@@ -597,9 +613,10 @@ a {
 .showcase-panel__center p {
   max-width: 20rem;
   margin: 0;
+  font-family: "Bebas Neue", "Sora", sans-serif;
   font-size: clamp(2rem, 4vw, 3.65rem);
   line-height: 0.95;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.03em;
 }
 
 .showcase-panel__bars {
@@ -672,9 +689,34 @@ a {
   border: 1px solid rgba(243, 239, 232, 0.08);
   border-radius: 2rem;
   background:
-    radial-gradient(circle at 88% 20%, rgba(240, 163, 107, 0.2), transparent 18%),
-    radial-gradient(circle at 14% 120%, rgba(114, 200, 220, 0.15), transparent 30%),
-    linear-gradient(135deg, rgba(16, 28, 36, 0.94), rgba(8, 16, 22, 0.98));
+    radial-gradient(circle at 88% 20%, rgba(255, 75, 153, 0.22), transparent 18%),
+    radial-gradient(circle at 14% 120%, rgba(238, 0, 102, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(24, 2, 15, 0.94), rgba(7, 0, 5, 0.98));
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.contact-item {
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-item span {
+  color: var(--muted);
 }
 
 .site-footer {
@@ -723,7 +765,8 @@ a {
   .hero__layout,
   .process,
   .showcase__inner,
-  .results__metrics {
+  .results__metrics,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 

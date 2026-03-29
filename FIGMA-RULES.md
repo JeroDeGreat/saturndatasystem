@@ -7,12 +7,12 @@ Use this document when recreating, extending, or aligning this site inside Figma
 - `index.html` contains the page structure and all on-page copy.
 - `styles.css` contains the visual system, layout rules, responsive behavior, and motion.
 - `script.js` contains reveal-on-scroll behavior, sticky header state, and the hero tilt interaction.
-- No logo file is currently hardcoded. The header uses a text-only brand lockup to avoid inventing a logo.
+- `assets/saturn-logo.svg` and `assets/saturn-favicon.png` are imported from the supplied Saturn asset pack.
 
 ## Core Visual Direction
 
-- Overall mood: cinematic, premium, calm, editorial, and quietly confident.
-- Primary impression: the first viewport should feel like a poster, not a template.
+- Overall mood: bold, space-inspired, premium, and technology-forward.
+- Primary impression: the first viewport should feel branded and unmistakably Saturn.
 - Section philosophy: one dominant idea per section, minimal clutter, no dashboard-card mosaic.
 - Motion philosophy: restrained, smooth, and atmospheric rather than decorative.
 
@@ -22,13 +22,13 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 
 ### Color Tokens
 
-- `--bg`: `#071116`
-- `--text`: `#f3efe8`
-- `--muted`: `rgba(243, 239, 232, 0.72)`
-- `--soft`: `rgba(243, 239, 232, 0.45)`
-- `--line`: `rgba(243, 239, 232, 0.12)`
-- `--accent`: `#f0a36b`
-- `--accent-strong`: `#ffbe85`
+- `--bg`: `#050005`
+- `--text`: `#fff7fb`
+- `--muted`: `rgba(255, 247, 251, 0.72)`
+- `--soft`: `rgba(255, 247, 251, 0.45)`
+- `--line`: `rgba(255, 247, 251, 0.12)`
+- `--accent`: `#ee0066`
+- `--accent-strong`: `#ff4b99`
 
 ### Shadow / Depth
 
@@ -41,13 +41,13 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 
 ## Typography
 
-- Primary sans: `Sora`
-- Display serif: `Instrument Serif`
+- Primary body font: `Outfit`
+- Display font: `Bebas Neue`
 
 ### Type Usage
 
-- Hero headline and major section headings use the sans family with tight tracking.
-- Accent words inside the hero use `Instrument Serif` in italic for contrast and premium flavor.
+- Hero headline and major section headings use `Bebas Neue`.
+- Accent words inside the hero use the same display family with the bright Saturn pink highlight.
 - Eyebrows are uppercase, small, high-letter-spacing labels in the accent color.
 - Body copy stays restrained and readable with muted contrast.
 
@@ -58,6 +58,7 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 - Floating, rounded, translucent shell
 - Fixed positioning
 - Gains background blur and border only after scroll
+- Includes the real Saturn logo in the brand lockup
 
 ### Hero
 
@@ -65,6 +66,7 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 - Two-column desktop layout, single-column mobile stack
 - Left side holds the message and CTA
 - Right side holds one large dominant visual plane
+- The visual plane includes the real Saturn logo and plan highlights
 
 ### Content Sections
 
@@ -110,8 +112,9 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 
 ## Asset Rules
 
-- No placeholder logo should be treated as the final identity
-- Any future imagery should preserve the same midnight, copper, ivory, and soft aqua palette unless you supply a different existing brand system
+- Use the supplied Saturn logo pack as the source of truth.
+- Preserve the black, white, and vivid magenta identity from the provided Saturn files.
+- Any future imagery should support the "Connecting Liberia" broadband story rather than generic SaaS visuals.
 - Avoid bright neons, purple-heavy accents, and overly busy textures
 
 ## Build Notes For Designers
@@ -119,4 +122,4 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 - Keep the first screen brand-forward.
 - Preserve a narrow text column in the hero for readability.
 - Do not replace the hero with generic SaaS cards or floating analytics panels.
-- If adding screenshots or photography later, choose calm, low-clutter imagery with clear tonal space for text.
+- If adding screenshots or photography later, choose assets that support broadband infrastructure, households, neighborhoods, or Liberia-specific context.
