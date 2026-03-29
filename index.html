@@ -6,12 +6,12 @@
     <title>Saturn Data Systems | Connecting Liberia</title>
     <meta
       name="description"
-      content="Saturn Data Systems delivers affordable broadband in Liberia with flat monthly pricing, no data caps, Starlink backhaul, and Wi-Fi 6 neighborhood coverage."
+      content="Saturn Data Systems delivers affordable home internet for Liberia with a flat $10 plan, no data caps, Starlink backhaul, Wi-Fi 6 coverage, and local support."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/saturn-favicon.png" />
@@ -20,52 +20,95 @@
   <body>
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="Saturn Data Systems home">
-          <img src="assets/saturn-logo.svg" alt="Saturn Data Systems logo" />
-          <span>Saturn Data Systems</span>
+        <nav class="site-nav site-nav--left" aria-label="Primary left">
+          <a href="#home">Home</a>
+          <a href="#plan">Plans</a>
+          <a href="#network">Network</a>
+        </nav>
+
+        <a class="brand" href="#home" aria-label="Saturn Data Systems home">
+          <span class="brand__seal">
+            <img src="assets/saturn-logo.svg" alt="Saturn Data Systems logo" />
+          </span>
+          <span class="brand__copy">
+            <strong>Saturn</strong>
+            <small>Data Systems</small>
+          </span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#plans">Plans</a>
-          <a href="#network">How It Works</a>
+        <nav class="site-nav site-nav--right" aria-label="Primary right">
           <a href="#coverage">Coverage</a>
+          <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a class="header-cta" href="#plans">View the $10 plan</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
 
-      <main id="top">
-        <section class="hero">
+      <div class="mobile-nav" id="mobile-nav">
+        <a href="#home">Home</a>
+        <a href="#plan">Plans</a>
+        <a href="#performance">Performance</a>
+        <a href="#network">Network</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <main>
+        <section class="hero" id="home">
           <div class="hero__ambient" aria-hidden="true"></div>
           <div class="hero__noise" aria-hidden="true"></div>
 
           <div class="hero__layout">
             <div class="hero__content">
-              <p class="eyebrow reveal">Connecting Liberia</p>
+              <p class="eyebrow reveal">Saturn Data Systems | Connecting Liberia</p>
 
               <h1 class="hero__title reveal">
-                Broadband your
-                <span>household can keep on</span>,
-                not just buy in fragments.
+                Home internet Liberia can finally
+                <span>plan around.</span>
               </h1>
 
               <p class="hero__lede reveal">
-                Saturn Data Systems brings flat-rate home internet to Liberia with no data caps,
-                guaranteed speeds, Starlink-powered backhaul, and Wi-Fi 6 coverage designed for
-                real neighborhoods in and around Monrovia.
+                Saturn brings a flat $10 monthly broadband plan to Monrovia households with 5 Mbps
+                download, 2 Mbps upload, no data caps, Starlink backhaul, Wi-Fi 6 coverage, and
+                support that feels local instead of distant.
               </p>
 
               <div class="hero__actions reveal">
-                <a class="button button--primary" href="#plans">See the Saturn plan</a>
-                <a class="button button--ghost" href="#network">How the network works</a>
+                <a class="button button--primary" href="#plan">See the Saturn plan</a>
+                <a class="button button--ghost" href="#contact">Check coverage</a>
               </div>
 
-              <ul class="hero__signals reveal" aria-label="Core strengths">
-                <li>$10 flat monthly plan</li>
-                <li>No data caps, ever</li>
-                <li>WhatsApp-first support</li>
-              </ul>
+              <div class="hero__stats reveal">
+                <div>
+                  <strong>$10</strong>
+                  <span>flat monthly plan</span>
+                </div>
+                <div>
+                  <strong>5 / 2 Mbps</strong>
+                  <span>guaranteed home speed</span>
+                </div>
+                <div>
+                  <strong>Monrovia</strong>
+                  <span>launch zone today</span>
+                </div>
+                <div>
+                  <strong>Daily support</strong>
+                  <span>7:00 AM to 9:00 PM</span>
+                </div>
+              </div>
             </div>
 
             <div class="hero__visual reveal">
@@ -80,257 +123,542 @@
                     <span></span>
                   </div>
 
-                  <img
-                    class="surface-logo"
-                    src="assets/saturn-logo.svg"
-                    alt="Saturn Data Systems logo"
-                  />
+                  <div class="signature">
+                    <div class="signature__seal">
+                      <img src="assets/saturn-logo.svg" alt="Saturn Data Systems logo" />
+                    </div>
+                    <div class="signature__copy">
+                      <strong>Saturn Data Systems</strong>
+                      <span>Professional broadband for modern Liberian households</span>
+                    </div>
+                  </div>
 
                   <div class="surface-branding">
-                    <p class="surface-kicker">One plan. Flat rate. Always on.</p>
-                    <h2>Affordable broadband for Liberian households.</h2>
+                    <p class="surface-kicker">A refined brand treatment, same Saturn mission</p>
+                    <h2>Clear pricing, serious infrastructure, and a calmer digital experience.</h2>
                   </div>
 
                   <div class="surface-breakdown">
                     <div>
-                      <strong>$10</strong>
-                      <p>One honest monthly rate with no contract and no hidden usage traps.</p>
+                      <strong>The offer</strong>
+                      <p>One honest plan, no data caps, no contract traps, and no bundle confusion.</p>
                     </div>
                     <div>
-                      <strong>5 / 2</strong>
-                      <p>Guaranteed 5 Mbps down and 2 Mbps up, with bursts up to 15 Mbps off-peak.</p>
+                      <strong>The network</strong>
+                      <p>Starlink backhaul, MikroTik routing, and Wi-Fi 6 outdoor access points.</p>
                     </div>
                     <div>
-                      <strong>24h</strong>
-                      <p>Fast activation flow once your address is confirmed inside a live coverage zone.</p>
+                      <strong>The customer fit</strong>
+                      <p>Video calls, schoolwork, social media, streaming, and small-business use.</p>
+                    </div>
+                    <div>
+                      <strong>The support</strong>
+                      <p>Local response first, with WhatsApp-friendly service once the public number is finalized.</p>
                     </div>
                   </div>
 
                   <div class="surface-runner">
-                    <span>Starlink LEO</span>
-                    <span>MikroTik routing</span>
-                    <span>Wi-Fi 6 outdoor APs</span>
                     <span>LTA licensed</span>
+                    <span>2 devices included</span>
+                    <span>720p streaming</span>
+                    <span>MTN and Orange payments</span>
                   </div>
                 </div>
 
                 <p class="hero-stage__note">
-                  Starting in Monrovia and expanding steadily as new neighborhoods come online.
+                  Saturn still looks like Saturn here. The palette, spacing, and presentation are
+                  refined, but the core identity stays intact.
                 </p>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="hero__ticker" aria-hidden="true">
-            <span>Connecting Liberia</span>
-            <span>No data caps</span>
-            <span>Starlink backhaul</span>
-            <span>Wi-Fi 6 coverage</span>
-            <span>$10 flat plan</span>
-            <span>Connecting Liberia</span>
-            <span>No data caps</span>
-            <span>Starlink backhaul</span>
+        <section class="section section--tight">
+          <div class="section__inner">
+            <div class="value-strip">
+              <article class="value-card reveal">
+                <strong>Price clarity</strong>
+                <h3>A household can understand the offer in seconds</h3>
+                <p>$10 monthly, 5 Mbps down, 2 Mbps up, no cap counting, and no hidden conditions.</p>
+              </article>
+
+              <article class="value-card reveal">
+                <strong>Technical credibility</strong>
+                <h3>The network story sounds serious because it is</h3>
+                <p>Saturn explains the infrastructure plainly, which makes the brand feel more trustworthy.</p>
+              </article>
+
+              <article class="value-card reveal">
+                <strong>Liberia first</strong>
+                <h3>The service is designed around local payment and support habits</h3>
+                <p>Monrovia rollout, mobile money familiarity, and human support all stay front and center.</p>
+              </article>
+            </div>
           </div>
         </section>
 
-        <section class="section section--tight" id="plans">
-          <div class="section__inner">
-            <div class="section-heading reveal">
-              <p class="eyebrow">Simple Pricing</p>
-              <h2 class="section-title">
-                One household plan built to be affordable, understandable, and usable every day.
-              </h2>
+        <section class="section" id="plan">
+          <div class="section__inner plan-layout">
+            <div class="section-copy reveal">
+              <p class="eyebrow">Plans and Pricing</p>
+              <h2 class="section-title">One offer, presented with enough detail to feel real.</h2>
               <p class="section-body">
-                Saturn does not bury the offer in complicated tiers. The message is simple: one
-                flat-rate broadband plan for homes that need dependable access without counting
-                gigabytes every week.
+                The sample page had good information here. This redesign keeps that substance, but
+                gives it a cleaner hierarchy so the plan feels premium instead of busy.
+              </p>
+
+              <div class="plan-side-grid">
+                <article class="side-card">
+                  <strong>What households get</strong>
+                  <p>Reliable everyday broadband for streaming, voice calls, schoolwork, and routine business tasks.</p>
+                </article>
+                <article class="side-card">
+                  <strong>How people pay</strong>
+                  <p>MTN Mobile Money, Orange Money, or cash, with a month-to-month relationship and no contract.</p>
+                </article>
+              </div>
+            </div>
+
+            <article class="plan-card reveal">
+              <div class="plan-card__badge">Saturn Standard</div>
+              <p class="plan-card__name">Current public plan</p>
+
+              <div class="plan-card__price">
+                <span>$10</span>
+                <small>per month</small>
+              </div>
+
+              <p class="plan-card__tag">Quality broadband for every Liberian household</p>
+
+              <div class="speed-grid">
+                <div>
+                  <strong>5 Mbps</strong>
+                  <span>download guaranteed</span>
+                </div>
+                <div>
+                  <strong>2 Mbps</strong>
+                  <span>upload guaranteed</span>
+                </div>
+              </div>
+
+              <ul class="feature-list">
+                <li>Burst up to 15 Mbps during off-peak hours</li>
+                <li>2 devices connected simultaneously</li>
+                <li>Unlimited usage with zero data cap</li>
+                <li>WhatsApp and FaceTime HD calls</li>
+                <li>YouTube streaming up to 720p</li>
+                <li>Facebook, Instagram, TikTok, and Gmail at full speed</li>
+                <li>Research, Google Docs, online shopping, and digital business tools</li>
+                <li>No contract and cancel-anytime flexibility</li>
+              </ul>
+
+              <div class="payment-row">
+                <span>MTN Mobile Money</span>
+                <span>Orange Money</span>
+                <span>Cash</span>
+              </div>
+
+              <a class="button button--primary plan-card__cta" href="#contact">Start a coverage request</a>
+            </article>
+          </div>
+
+          <div class="section__inner comparison-grid">
+            <article class="comparison-card reveal">
+              <strong>Typical mobile data</strong>
+              <span>$1.67 / GB</span>
+              <p>Usable in short bursts, but expensive for a household that needs internet every day.</p>
+            </article>
+
+            <article class="comparison-card reveal">
+              <strong>Competitor usage cost</strong>
+              <span>Up to $14.50 / GB</span>
+              <p>Higher effective cost and much more anxiety for customers trying to stay connected.</p>
+            </article>
+
+            <article class="comparison-card comparison-card--accent reveal">
+              <strong>Saturn Data Systems</strong>
+              <span>$10 flat</span>
+              <p>One clear monthly price, no data cap, and a message people can trust immediately.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--tight" id="performance">
+          <div class="section__inner">
+            <div class="section-copy reveal">
+              <p class="eyebrow">What 5 Mbps Gets You</p>
+              <h2 class="section-title">Better daily life, not just a bigger number on paper.</h2>
+              <p class="section-body">
+                Saturn should explain outcomes, not just speeds. That is what helps people picture
+                the service inside a real home.
               </p>
             </div>
 
-            <div class="line-list">
-              <article class="line-list__item reveal">
-                <span>$10</span>
-                <div>
-                  <h3>Flat monthly pricing</h3>
-                  <p>One clear price point for quality broadband with no contract pressure.</p>
-                </div>
+            <div class="capability-grid">
+              <article class="capability-card reveal">
+                <strong>WhatsApp</strong>
+                <p>Full-quality messaging, voice calls, and video calls for families and daily communication.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>YouTube</strong>
+                <p>720p viewing that feels smooth enough for learning, entertainment, and family use.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Social apps</strong>
+                <p>Facebook, Instagram, and TikTok browsing, posting, and routine day-to-day use.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Email and work</strong>
+                <p>Gmail, attachments, research, and collaborative tools like Google Docs.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Online shopping</strong>
+                <p>Product browsing, ordering, and digital payment workflows without counting megabytes.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Education</strong>
+                <p>Wikipedia, Khan Academy, online classes, and homework support for students at home.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Small business</strong>
+                <p>WhatsApp Business, inventory checks, online communication, and practical admin tasks.</p>
+              </article>
+              <article class="capability-card reveal">
+                <strong>Multiple users</strong>
+                <p>Two devices included at once, which fits many everyday household browsing patterns.</p>
+              </article>
+            </div>
+
+            <div class="audience-grid">
+              <article class="audience-card reveal">
+                <strong>For families</strong>
+                <h3>Keep school, calls, and home browsing on one simple plan</h3>
+                <p>No cap counting, no surprise recharges, and a price that is easier to budget monthly.</p>
               </article>
 
-              <article class="line-list__item reveal">
-                <span>5 / 2</span>
-                <div>
-                  <h3>Guaranteed everyday speed</h3>
-                  <p>5 Mbps download and 2 Mbps upload, with bursts to 15 Mbps during off-peak hours.</p>
-                </div>
+              <article class="audience-card reveal">
+                <strong>For students</strong>
+                <h3>Support online learning without turning every session into a cost decision</h3>
+                <p>Research, classes, email, and video resources all become more practical at home.</p>
               </article>
 
-              <article class="line-list__item reveal">
-                <span>∞</span>
-                <div>
-                  <h3>No data caps</h3>
-                  <p>You keep using the service all month without the account being drained by usage.</p>
-                </div>
-              </article>
-
-              <article class="line-list__item reveal">
-                <span>Pay</span>
-                <div>
-                  <h3>Flexible payment options</h3>
-                  <p>MTN Mobile Money, Orange Money, and cash support a practical local payment flow.</p>
-                </div>
+              <article class="audience-card reveal">
+                <strong>For small operators</strong>
+                <h3>Power the communication side of a growing neighborhood business</h3>
+                <p>Messages, orders, browsing, and everyday digital coordination stay accessible and stable.</p>
               </article>
             </div>
           </div>
         </section>
 
         <section class="section" id="network">
-          <div class="section__inner process">
-            <div class="process__intro reveal">
-              <p class="eyebrow">How It Works</p>
-              <h2 class="section-title">
-                From space to your screen in milliseconds, using infrastructure built for reliability.
-              </h2>
+          <div class="section__inner network-layout">
+            <div class="network-copy reveal">
+              <p class="eyebrow">How the Network Works</p>
+              <h2 class="section-title">From space to the street, explained like a serious service.</h2>
               <p class="section-body">
-                The Saturn network story is a real differentiator. It shows households that this is
-                serious broadband service, not just another resold data package with uncertain
-                performance.
+                This is one of Saturn's strongest credibility sections. It should feel confident,
+                readable, and specific enough that people understand the engineering behind the promise.
               </p>
             </div>
 
-            <div class="process__steps">
-              <article class="process-step reveal">
-                <strong>01</strong>
-                <h3>Starlink backhaul brings internet into the network</h3>
-                <p>
-                  Saturn starts with low-earth-orbit satellite backhaul instead of waiting on
-                  traditional trenching or unstable mobile data paths.
-                </p>
+            <div class="timeline">
+              <article class="timeline-step reveal">
+                <strong>1</strong>
+                <div>
+                  <h3>Starlink low-earth-orbit backhaul</h3>
+                  <p>
+                    Saturn brings internet into the network with Starlink, creating a strong upstream
+                    foundation before it is distributed locally.
+                  </p>
+                </div>
               </article>
 
-              <article class="process-step reveal">
-                <strong>02</strong>
-                <h3>MikroTik routing manages accounts and performance</h3>
-                <p>
-                  Enterprise-grade routing handles subscriber credentials, speed policy, account
-                  logic, and network monitoring in one controlled core.
-                </p>
+              <article class="timeline-step reveal">
+                <strong>2</strong>
+                <div>
+                  <h3>MikroTik enterprise routing</h3>
+                  <p>
+                    The router manages credentials, device limits, speed profiles, and network visibility
+                    across the subscriber base.
+                  </p>
+                </div>
               </article>
 
-              <article class="process-step reveal">
-                <strong>03</strong>
-                <h3>PoE and Wi-Fi 6 push the service into neighborhoods</h3>
-                <p>
-                  Outdoor access points broadcast stable coverage with modern wireless capacity,
-                  helping multiple homes stay online without collapsing the experience.
-                </p>
+              <article class="timeline-step reveal">
+                <strong>3</strong>
+                <div>
+                  <h3>PoE switching for clean deployment</h3>
+                  <p>
+                    Power-over-Ethernet helps keep rooftop and pole equipment simpler, neater, and easier
+                    to maintain.
+                  </p>
+                </div>
               </article>
 
-              <article class="process-step reveal">
-                <strong>04</strong>
-                <h3>Subscribers connect with simple credentials and stay online</h3>
-                <p>
-                  Residents log in, use the internet freely, and get month-to-month access without
-                  being boxed into cap-heavy usage behavior.
-                </p>
+              <article class="timeline-step reveal">
+                <strong>4</strong>
+                <div>
+                  <h3>Wi-Fi 6 access points across the coverage zone</h3>
+                  <p>
+                    Outdoor access points push coverage through the neighborhood with better capacity than
+                    an ad-hoc hotspot model.
+                  </p>
+                </div>
+              </article>
+
+              <article class="timeline-step reveal">
+                <strong>5</strong>
+                <div>
+                  <h3>Simple subscriber login and use</h3>
+                  <p>
+                    Customers connect with their account details and use the service without watching a
+                    data balance disappear.
+                  </p>
+                </div>
               </article>
             </div>
           </div>
+
+          <div class="section__inner metric-panel">
+            <article class="metric-tile reveal">
+              <strong>25 to 250 Mbps</strong>
+              <span>Starlink backhaul range</span>
+            </article>
+            <article class="metric-tile reveal">
+              <strong>20 ms</strong>
+              <span>latency target</span>
+            </article>
+            <article class="metric-tile reveal">
+              <strong>200 m</strong>
+              <span>coverage radius per AP</span>
+            </article>
+            <article class="metric-tile reveal">
+              <strong>50+</strong>
+              <span>households per AP</span>
+            </article>
+            <article class="metric-tile reveal">
+              <strong>Wi-Fi 6</strong>
+              <span>outdoor access layer</span>
+            </article>
+            <article class="metric-tile reveal">
+              <strong>24/7</strong>
+              <span>network monitoring</span>
+            </article>
+          </div>
+
+          <div class="section__inner trust-grid">
+            <article class="trust-card reveal">
+              <strong>Firewall protection</strong>
+              <p>Enterprise routing helps protect the network from unauthorized access and routine abuse.</p>
+            </article>
+            <article class="trust-card reveal">
+              <strong>Isolated accounts</strong>
+              <p>Subscriber access is organized cleanly so one household is not casually exposed to another.</p>
+            </article>
+            <article class="trust-card reveal">
+              <strong>LTA licensed</strong>
+              <p>Saturn presents itself as a licensed telecommunications operator in Liberia.</p>
+            </article>
+            <article class="trust-card reveal">
+              <strong>Human support</strong>
+              <p>Support should feel local, reachable, and practical rather than outsourced and anonymous.</p>
+            </article>
+          </div>
         </section>
 
-        <section class="section showcase" id="coverage">
-          <div class="section__inner showcase__inner">
-            <div class="showcase__copy reveal">
-              <p class="eyebrow">Coverage Direction</p>
-              <h2 class="section-title">
-                Monrovia first, expansion next, with service designed around practical community reach.
-              </h2>
+        <section class="section" id="coverage">
+          <div class="section__inner coverage-layout">
+            <div class="section-copy reveal">
+              <p class="eyebrow">Coverage and Rollout</p>
+              <h2 class="section-title">A growth story that feels concrete instead of vague.</h2>
               <p class="section-body">
-                Saturn can position coverage as both real and growing: active neighborhoods now,
-                nearby areas coming next, and an expansion story built around demand instead of vague
-                promises.
+                Saturn should be ambitious without pretending to cover the whole country on day one.
+                Honesty here makes the brand more professional.
               </p>
             </div>
 
-            <div class="showcase__visual reveal" aria-hidden="true">
-              <div class="showcase-panel">
-                <div class="showcase-panel__top">
-                  <span>Monrovia coverage model</span>
-                  <span>Built for neighborhood rollout</span>
-                </div>
+            <div class="coverage-panel reveal">
+              <div class="coverage-orbit coverage-orbit--core"></div>
+              <div class="coverage-orbit coverage-orbit--mid"></div>
+              <div class="coverage-orbit coverage-orbit--edge"></div>
+              <div class="coverage-node coverage-node--one"></div>
+              <div class="coverage-node coverage-node--two"></div>
+              <div class="coverage-node coverage-node--three"></div>
 
-                <div class="showcase-panel__center">
-                  <p>Coverage that starts local and scales with confidence.</p>
-                  <div class="showcase-panel__bars">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-
-                <div class="showcase-panel__bottom">
-                  <div>
-                    <strong>200m</strong>
-                    <p>target radius per outdoor access point</p>
-                  </div>
-                  <div>
-                    <strong>50+</strong>
-                    <p>devices supported per AP in the network model</p>
-                  </div>
-                </div>
+              <div class="coverage-copy">
+                <strong>Monrovia launch zone</strong>
+                <p>Start local, prove reliability, and expand neighborhood by neighborhood with visible demand.</p>
               </div>
             </div>
           </div>
+
+          <div class="section__inner coverage-grid">
+            <article class="coverage-card reveal">
+              <strong>Phase 1 | Now</strong>
+              <h3>Monrovia launch zone</h3>
+              <p>Current service area focused on building reliable early coverage for 50 to 150 households.</p>
+            </article>
+
+            <article class="coverage-card reveal">
+              <strong>Phase 2 | Next</strong>
+              <h3>Greater Monrovia expansion</h3>
+              <p>Paynesville, Congo Town, and nearby demand-led zones become the clearest next move.</p>
+            </article>
+
+            <article class="coverage-card reveal">
+              <strong>Phase 3 | Future</strong>
+              <h3>Broader Liberia growth path</h3>
+              <p>The national vision stays visible, but the communication remains grounded and credible.</p>
+            </article>
+          </div>
         </section>
 
-        <section class="section section--tight" id="results">
-          <div class="section__inner results">
-            <div class="results__quote reveal">
-              <p class="eyebrow">Why Saturn Stands Out</p>
-              <blockquote>Affordable, quality internet for the people of Liberia.</blockquote>
-              <p>
-                The redesigned site should make that promise feel credible by pairing better visuals
-                with clearer service detail.
+        <section class="section section--tight" id="about">
+          <div class="section__inner about-layout">
+            <div class="section-copy reveal">
+              <p class="eyebrow">About Saturn</p>
+              <h2 class="section-title">A Liberia-first broadband company built around a practical problem.</h2>
+              <p class="section-body">
+                Saturn exists because mobile data costs push real internet use out of reach for too many
+                households. This is the story that makes the brand more than a tariff table.
               </p>
             </div>
 
-            <div class="results__metrics">
-              <article class="metric reveal">
-                <strong>01</strong>
-                <h3>No cap anxiety</h3>
-                <p>
-                  The biggest emotional benefit is freedom from constantly measuring data usage.
-                </p>
+            <article class="story-panel reveal">
+              <p>
+                In Liberia, 1 GB of mobile data can cost around $1.67. For a family trying to stay
+                connected to school, business, relatives, and online services, that can quickly become
+                $30, $40, or $50 a month.
+              </p>
+              <p>
+                Saturn Data Systems was built to answer that gap with a real broadband plan: technically
+                serious, legally compliant, locally supported, and simple enough for a household to trust.
+              </p>
+            </article>
+          </div>
+
+          <div class="section__inner founder-grid">
+            <article class="founder-card reveal">
+              <strong>Leadership</strong>
+              <h3>Jesse Grabo</h3>
+              <p class="founder-role">Operations, regulatory compliance, and community partnerships</p>
+              <p>
+                Jesse brings the business and local relationship side of Saturn forward, helping the company
+                earn trust through compliance, partnerships, and a Liberia-centered service approach.
+              </p>
+            </article>
+
+            <article class="founder-card reveal">
+              <strong>Leadership</strong>
+              <h3>Jero Grabo</h3>
+              <p class="founder-role">Technical architecture and network design</p>
+              <p>
+                Jero leads the network side of Saturn, from Starlink backhaul and MikroTik routing to Wi-Fi 6
+                deployment and the technical quality of the subscriber experience.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--tight" id="faq">
+          <div class="section__inner">
+            <div class="section-copy reveal">
+              <p class="eyebrow">Frequently Asked Questions</p>
+              <h2 class="section-title">More answers, with less friction and less hesitation.</h2>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>How do I sign up?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Start by checking if your neighborhood sits inside the current coverage zone. Saturn can
+                    then confirm the plan, collect the first payment, and guide the activation process.
+                  </p>
+                </div>
               </article>
 
-              <article class="metric reveal">
-                <strong>02</strong>
-                <h3>Human support</h3>
-                <p>
-                  WhatsApp-first support feels more local, direct, and trustworthy than a distant call center.
-                </p>
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>Is there really no data cap?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes. The offer is designed around unlimited monthly usage. Speed policies help the network
+                    stay fair, but the customer is not billed per gigabyte.
+                  </p>
+                </div>
               </article>
 
-              <article class="metric reveal">
-                <strong>03</strong>
-                <h3>Licensed and serious</h3>
-                <p>
-                  LTA licensing, enterprise routing, and named infrastructure make the brand feel legitimate.
-                </p>
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>What can I do at 5 Mbps?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Video calls, 720p streaming, social media, Gmail, Google Docs, online learning, and
+                    ordinary browsing all fit naturally into the plan when the connection is stable.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>How do monthly payments work?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Saturn is positioned around familiar payment channels: MTN Mobile Money, Orange Money,
+                    and cash where needed.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>What if I need support?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Support should feel direct and human. Saturn can present email, local response hours,
+                    and WhatsApp-based follow-up once the public number is finalized.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item reveal">
+                <button class="faq-question" type="button" aria-expanded="false">
+                  <span>Is there a contract?</span>
+                  <strong>+</strong>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    No long contract is highlighted here. Saturn is framed as a month-to-month service that
+                    earns loyalty through performance rather than paperwork.
+                  </p>
+                </div>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="section contact" id="contact">
-          <div class="section__inner">
-            <div class="contact-panel reveal">
+        <section class="section" id="contact">
+          <div class="section__inner contact-layout">
+            <article class="contact-panel reveal">
               <p class="eyebrow">Get Connected</p>
-              <h2 class="section-title">
-                Ready to confirm coverage and bring Saturn internet into your area?
-              </h2>
+              <h2 class="section-title">Everything a new customer needs to know before reaching out.</h2>
               <p class="section-body">
-                The next version can plug in your exact WhatsApp number, onboarding flow, and payment
-                process. For now, the site is ready around the real Saturn offer and identity.
+                This section now carries more of the sample site's substance, but in a structure that feels
+                more professional and much easier to scan.
               </p>
 
               <div class="contact-grid">
@@ -343,24 +671,153 @@
                   <span>Monrovia, Liberia</span>
                 </div>
                 <div class="contact-item">
+                  <strong>Support hours</strong>
+                  <span>7:00 AM to 9:00 PM, Monday to Sunday</span>
+                </div>
+                <div class="contact-item">
                   <strong>Status</strong>
-                  <span>LTA licensed operator</span>
+                  <span>Licensed by the Liberia Telecommunications Authority</span>
                 </div>
               </div>
 
               <div class="hero__actions">
                 <a class="button button--primary" href="mailto:info@saturndatasystems.lr">Email Saturn</a>
-                <a class="button button--ghost" href="#top">Back to top</a>
+                <a class="button button--ghost" href="#plan">Review the plan</a>
               </div>
-            </div>
+            </article>
+
+            <article class="support-panel reveal">
+              <p class="eyebrow">How To Start</p>
+              <h3>Three steps to a cleaner customer journey.</h3>
+
+              <div class="support-steps">
+                <div class="support-step">
+                  <strong>1</strong>
+                  <div>
+                    <h4>Share your neighborhood</h4>
+                    <p>Saturn confirms whether the address sits inside the current rollout zone.</p>
+                  </div>
+                </div>
+
+                <div class="support-step">
+                  <strong>2</strong>
+                  <div>
+                    <h4>Confirm the plan and payment path</h4>
+                    <p>Customers review the $10 offer and choose the most practical payment method.</p>
+                  </div>
+                </div>
+
+                <div class="support-step">
+                  <strong>3</strong>
+                  <div>
+                    <h4>Activate and stay connected</h4>
+                    <p>Once approved, the account details and support process can be shared clearly.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="support-note">
+                <strong>WhatsApp support</strong>
+                <p>The public WhatsApp number can be added here once finalized, without using a fake placeholder in the meantime.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="section__inner enquiry-layout">
+            <form class="interest-form reveal" id="interest-form">
+              <p class="eyebrow">Coverage Request</p>
+              <h3>Tell Saturn where you are and what you need.</h3>
+
+              <div class="form-grid">
+                <label>
+                  <span>Name</span>
+                  <input id="contact-name" name="name" type="text" placeholder="Your full name" />
+                </label>
+                <label>
+                  <span>Neighborhood</span>
+                  <input
+                    id="contact-neighborhood"
+                    name="neighborhood"
+                    type="text"
+                    placeholder="For example, Sinkor or Paynesville"
+                  />
+                </label>
+                <label>
+                  <span>Reason</span>
+                  <select id="contact-reason" name="reason">
+                    <option value="">Select a reason</option>
+                    <option>New home internet request</option>
+                    <option>Coverage question</option>
+                    <option>Business inquiry</option>
+                    <option>Existing subscriber support</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Best reply channel</span>
+                  <input id="contact-channel" name="channel" type="text" placeholder="Email or phone" />
+                </label>
+              </div>
+
+              <label class="form-message">
+                <span>Message</span>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="5"
+                  placeholder="Share your street, household size, or anything Saturn should know."
+                ></textarea>
+              </label>
+
+              <button class="button button--primary" type="submit">Open email request</button>
+              <p class="form-note" id="form-note" aria-live="polite">
+                This opens your email app with the details prefilled for Saturn.
+              </p>
+            </form>
+
+            <article class="mission-panel reveal">
+              <p class="eyebrow">Brand Promise</p>
+              <blockquote>
+                Affordable, quality internet for the people of Liberia. Building a connected nation,
+                one household at a time.
+              </blockquote>
+
+              <div class="mission-list">
+                <div>
+                  <strong>Core brand preserved</strong>
+                  <p>Saturn remains Saturn: black, white, magenta, orbit energy, and a Liberia-first mission.</p>
+                </div>
+                <div>
+                  <strong>Modernized execution</strong>
+                  <p>The site now feels calmer, more structured, and more credible without drifting into a different identity.</p>
+                </div>
+                <div>
+                  <strong>More usable content</strong>
+                  <p>The founder story, support details, rollout plan, and technical explanations are all back in the experience.</p>
+                </div>
+              </div>
+            </article>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>Saturn Data Systems</p>
-        <p>Licensed by the Liberia Telecommunications Authority</p>
-        <p id="year"></p>
+        <div>
+          <p class="footer-brand">Saturn Data Systems</p>
+          <p>Connecting Liberia with clearer, more affordable broadband.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#plan">Plans</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-meta">
+          <p>LTA licensed operator</p>
+          <p id="year"></p>
+        </div>
       </footer>
     </div>
 
