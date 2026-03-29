@@ -2,7 +2,7 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const header = document.querySelector(".site-header");
 const year = document.querySelector("#year");
 const revealElements = document.querySelectorAll(".reveal");
-const heroStage = document.querySelector(".hero-stage");
+const orbitalStage = document.querySelector(".orbital-stage");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileLinks = document.querySelectorAll(".mobile-nav a");
@@ -16,17 +16,9 @@ if (year) {
   year.textContent = new Date().getFullYear().toString();
 }
 
-const linkMap = {
-  performance: "plan",
-  faq: "contact",
-};
-
 const setActiveLink = (sectionId) => {
-  const resolvedSection = linkMap[sectionId] || sectionId;
-  const hrefs = new Set([`#${sectionId}`, `#${resolvedSection}`]);
-
   navLinks.forEach((link) => {
-    const isActive = hrefs.has(link.getAttribute("href"));
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
     link.classList.toggle("is-active", isActive);
   });
 };
@@ -122,36 +114,32 @@ if (trackedSections.length && "IntersectionObserver" in window) {
     },
     {
       threshold: [0.2, 0.45, 0.7],
-      rootMargin: "-20% 0px -55% 0px",
+      rootMargin: "-22% 0px -55% 0px",
     }
   );
 
   trackedSections.forEach((section) => sectionObserver.observe(section));
-  setActiveLink("home");
+  setActiveLink("offer");
 }
 
-if (heroStage && !prefersReducedMotion) {
+if (orbitalStage && !prefersReducedMotion) {
   const resetTilt = () => {
-    heroStage.style.setProperty("--tilt-x", "0deg");
-    heroStage.style.setProperty("--tilt-y", "0deg");
-    heroStage.style.setProperty("--spot-x", "50%");
-    heroStage.style.setProperty("--spot-y", "50%");
+    orbitalStage.style.setProperty("--tilt-x", "0deg");
+    orbitalStage.style.setProperty("--tilt-y", "0deg");
   };
 
-  heroStage.addEventListener("pointermove", (event) => {
-    const rect = heroStage.getBoundingClientRect();
+  orbitalStage.addEventListener("pointermove", (event) => {
+    const rect = orbitalStage.getBoundingClientRect();
     const px = (event.clientX - rect.left) / rect.width;
     const py = (event.clientY - rect.top) / rect.height;
-    const tiltX = (px - 0.5) * 8;
-    const tiltY = (py - 0.5) * -8;
+    const tiltX = (px - 0.5) * 7;
+    const tiltY = (py - 0.5) * -7;
 
-    heroStage.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
-    heroStage.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
-    heroStage.style.setProperty("--spot-x", `${(px * 100).toFixed(1)}%`);
-    heroStage.style.setProperty("--spot-y", `${(py * 100).toFixed(1)}%`);
+    orbitalStage.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+    orbitalStage.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
   });
 
-  heroStage.addEventListener("pointerleave", resetTilt);
+  orbitalStage.addEventListener("pointerleave", resetTilt);
 }
 
 faqItems.forEach((item) => {

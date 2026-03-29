@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Saturn Data Systems mark</title>
+  <desc id="desc">An orbital icon for Saturn Data Systems.</desc>
+  <defs>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8be8ff" />
+      <stop offset="100%" stop-color="#4faeff" />
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9bf1ff" />
+      <stop offset="55%" stop-color="#58c2ff" />
+      <stop offset="100%" stop-color="#2f7dff" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="#06141d" />
+  <circle cx="64" cy="64" r="18" fill="url(#core)" />
+  <ellipse
+    cx="64"
+    cy="64"
+    rx="45"
+    ry="21"
+    transform="rotate(-17 64 64)"
+    fill="none"
+    stroke="url(#ring)"
+    stroke-width="6"
+  />
+  <ellipse
+    cx="64"
+    cy="64"
+    rx="55"
+    ry="31"
+    transform="rotate(14 64 64)"
+    fill="none"
+    stroke="#8be8ff"
+    stroke-opacity="0.28"
+    stroke-width="2.5"
+  />
+  <circle cx="97" cy="42" r="5" fill="#bff7ff" />
+</svg>
