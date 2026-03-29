@@ -105,10 +105,6 @@ a {
   text-transform: uppercase;
 }
 
-.brand img {
-  border-radius: 50%;
-}
-
 .site-nav {
   display: inline-flex;
   align-items: center;

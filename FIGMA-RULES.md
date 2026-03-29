@@ -7,7 +7,7 @@ Use this document when recreating, extending, or aligning this site inside Figma
 - `index.html` contains the page structure and all on-page copy.
 - `styles.css` contains the visual system, layout rules, responsive behavior, and motion.
 - `script.js` contains reveal-on-scroll behavior, sticky header state, and the hero tilt interaction.
-- `assets/brand-mark.svg` contains the placeholder brand mark used in the header and favicon.
+- No logo file is currently hardcoded. The header uses a text-only brand lockup to avoid inventing a logo.
 
 ## Core Visual Direction
 
@@ -110,8 +110,8 @@ These values are currently defined in the `:root` block of `styles.css` and shou
 
 ## Asset Rules
 
-- Brand mark lives in `assets/brand-mark.svg`
-- Any future imagery should preserve the same midnight, copper, ivory, and soft aqua palette
+- No placeholder logo should be treated as the final identity
+- Any future imagery should preserve the same midnight, copper, ivory, and soft aqua palette unless you supply a different existing brand system
 - Avoid bright neons, purple-heavy accents, and overly busy textures
 
 ## Build Notes For Designers

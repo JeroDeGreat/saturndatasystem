@@ -1,4 +1,4 @@
-# Northline Studio Redesign
+# Saturn Data System Redesign
 
 This repo contains a premium single-page website concept built to replace a flatter, more generic layout with something cleaner, smoother, and more visually magnetic.
 
@@ -7,8 +7,6 @@ This repo contains a premium single-page website concept built to replace a flat
 - `index.html`: page structure and copy
 - `styles.css`: visual system, layout, motion, and responsive styling
 - `script.js`: reveal animations, sticky header state, and hero tilt interaction
-- `assets/brand-mark.svg`: simple brand mark used in the header and favicon
-
 ## Quick Preview
 
 From this folder, run a basic static server such as:
@@ -24,9 +22,9 @@ Then open `http://localhost:8000`.
 The fastest places to customize are:
 
 1. Update the brand name and copy in `index.html`.
-2. Swap the contact email in the final CTA section.
+2. Update the CTA target or contact flow in the final section.
 3. Adjust colors in the `:root` variables at the top of `styles.css`.
-4. Replace the placeholder brand mark in `assets/brand-mark.svg` if needed.
+4. Add your real logo or favicon once you want to lock the final brand asset.
 
 ## Design Direction
 
