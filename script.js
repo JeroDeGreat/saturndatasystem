@@ -2,7 +2,10 @@ const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)
 const header = document.querySelector(".site-header");
 const year = document.querySelector("#year");
 const revealElements = document.querySelectorAll(".reveal");
-const orbitalStage = document.querySelector(".orbital-stage");
+const hero = document.querySelector(".hero");
+const heroScene = document.querySelector(".hero-scene");
+const heroSteps = document.querySelectorAll(".hero-step");
+const heroCards = document.querySelectorAll(".scene-card");
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileNav = document.querySelector(".mobile-nav");
 const mobileLinks = document.querySelectorAll(".mobile-nav a");
@@ -11,6 +14,75 @@ const trackedSections = Array.from(document.querySelectorAll("section[id]"));
 const navLinks = document.querySelectorAll(".site-nav a, .mobile-nav a");
 const interestForm = document.querySelector("#interest-form");
 const formNote = document.querySelector("#form-note");
+const coverageChips = document.querySelectorAll(".coverage-chip");
+const coverageStatusLabel = document.querySelector("#coverage-status-label");
+const coverageTitle = document.querySelector("#coverage-title");
+const coverageDescription = document.querySelector("#coverage-description");
+const coveragePoints = document.querySelector("#coverage-points");
+const coverageLink = document.querySelector("#coverage-link");
+
+const coverageData = {
+  monrovia: {
+    status: "Active now",
+    title: "Monrovia launch zone",
+    description:
+      "Saturn is actively positioning Monrovia as the first service zone, with neighborhood confirmation before activation.",
+    points: [
+      "Home internet requests are reviewed by neighborhood",
+      "Best starting point for new household sign-ups",
+      "Support and rollout are centered here first",
+    ],
+    link: "https://www.openstreetmap.org/search?query=Monrovia%20Liberia",
+  },
+  ul: {
+    status: "Active access zone",
+    title: "University of Liberia area",
+    description:
+      "Your current brief places short-session access around UL inside Saturn's active-use story, especially for students and quick one-device sessions.",
+    points: [
+      "Good fit for Quick Pass use",
+      "Best for short study sessions and urgent online tasks",
+      "Use the request form to confirm exact access points",
+    ],
+    link: "https://www.openstreetmap.org/search?query=University%20of%20Liberia%20Monrovia%20Liberia",
+  },
+  paynesville: {
+    status: "Expansion queue",
+    title: "Paynesville",
+    description:
+      "The Saturn launch materials identify Paynesville as part of the next expansion wave after the first Monrovia launch zone.",
+    points: [
+      "Not presented as live yet",
+      "Part of the Greater Monrovia growth plan",
+      "Register interest early so demand is visible",
+    ],
+    link: "https://www.openstreetmap.org/search?query=Paynesville%20Liberia",
+  },
+  "congo-town": {
+    status: "Expansion queue",
+    title: "Congo Town",
+    description:
+      "Congo Town sits inside the Greater Monrovia rollout path rather than the currently confirmed live zone.",
+    points: [
+      "Expansion target, not current live service",
+      "Useful neighborhood to add to the request list",
+      "Saturn can confirm timing by demand and rollout progress",
+    ],
+    link: "https://www.openstreetmap.org/search?query=Congo%20Town%20Liberia",
+  },
+  brewerville: {
+    status: "Interest list",
+    title: "Brewerville",
+    description:
+      "Brewerville is not live in the current Saturn coverage story yet, so requests there should be logged as interest rather than ready activation.",
+    points: [
+      "Not live yet",
+      "Use the form to join the expansion interest list",
+      "Good candidate for future growth once demand is clear",
+    ],
+    link: "https://www.openstreetmap.org/search?query=Brewerville%20Liberia",
+  },
+};
 
 if (year) {
   year.textContent = new Date().getFullYear().toString();
@@ -51,8 +123,68 @@ const toggleMobileNav = () => {
   mobileNav.classList.toggle("is-open", isOpen);
 };
 
+const setHeroPhase = (phase) => {
+  if (!hero) {
+    return;
+  }
+
+  const phaseValue = String(phase);
+  hero.dataset.heroPhase = phaseValue;
+
+  heroSteps.forEach((step) => {
+    step.classList.toggle("is-active", step.dataset.phaseTarget === phaseValue);
+  });
+
+  heroCards.forEach((card) => {
+    card.classList.toggle("is-active", card.dataset.phaseCard === phaseValue);
+  });
+};
+
+const updateHeroScrollState = () => {
+  if (!hero) {
+    return;
+  }
+
+  const rect = hero.getBoundingClientRect();
+  const scrollableDistance = Math.max(hero.offsetHeight - window.innerHeight, 1);
+  const progress = Math.min(Math.max(-rect.top / scrollableDistance, 0), 1);
+
+  document.documentElement.style.setProperty("--hero-progress", progress.toFixed(3));
+
+  let nextPhase = 0;
+  if (progress >= 0.66) {
+    nextPhase = 2;
+  } else if (progress >= 0.33) {
+    nextPhase = 1;
+  }
+
+  setHeroPhase(nextPhase);
+};
+
+const updateCoverageCard = (zoneKey) => {
+  const zone = coverageData[zoneKey];
+  if (!zone || !coverageStatusLabel || !coverageTitle || !coverageDescription || !coveragePoints || !coverageLink) {
+    return;
+  }
+
+  coverageStatusLabel.textContent = zone.status;
+  coverageTitle.textContent = zone.title;
+  coverageDescription.textContent = zone.description;
+  coveragePoints.innerHTML = zone.points.map((point) => `<li>${point}</li>`).join("");
+  coverageLink.href = zone.link;
+};
+
 updateHeaderState();
-window.addEventListener("scroll", updateHeaderState, { passive: true });
+updateHeroScrollState();
+window.addEventListener(
+  "scroll",
+  () => {
+    updateHeaderState();
+    updateHeroScrollState();
+  },
+  { passive: true }
+);
+window.addEventListener("resize", updateHeroScrollState);
 
 if (menuToggle) {
   menuToggle.addEventListener("click", toggleMobileNav);
@@ -114,33 +246,43 @@ if (trackedSections.length && "IntersectionObserver" in window) {
     },
     {
       threshold: [0.2, 0.45, 0.7],
-      rootMargin: "-22% 0px -55% 0px",
+      rootMargin: "-20% 0px -55% 0px",
     }
   );
 
   trackedSections.forEach((section) => sectionObserver.observe(section));
-  setActiveLink("offer");
+  setActiveLink("home");
 }
 
-if (orbitalStage && !prefersReducedMotion) {
+if (heroScene && !prefersReducedMotion) {
   const resetTilt = () => {
-    orbitalStage.style.setProperty("--tilt-x", "0deg");
-    orbitalStage.style.setProperty("--tilt-y", "0deg");
+    heroScene.style.setProperty("--tilt-x", "0deg");
+    heroScene.style.setProperty("--tilt-y", "0deg");
   };
 
-  orbitalStage.addEventListener("pointermove", (event) => {
-    const rect = orbitalStage.getBoundingClientRect();
+  heroScene.addEventListener("pointermove", (event) => {
+    const rect = heroScene.getBoundingClientRect();
     const px = (event.clientX - rect.left) / rect.width;
     const py = (event.clientY - rect.top) / rect.height;
     const tiltX = (px - 0.5) * 7;
     const tiltY = (py - 0.5) * -7;
 
-    orbitalStage.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
-    orbitalStage.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
+    heroScene.style.setProperty("--tilt-x", `${tiltX.toFixed(2)}deg`);
+    heroScene.style.setProperty("--tilt-y", `${tiltY.toFixed(2)}deg`);
   });
 
-  orbitalStage.addEventListener("pointerleave", resetTilt);
+  heroScene.addEventListener("pointerleave", resetTilt);
 }
+
+coverageChips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    coverageChips.forEach((button) => button.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    updateCoverageCard(chip.dataset.zone || "monrovia");
+  });
+});
+
+updateCoverageCard("monrovia");
 
 faqItems.forEach((item) => {
   const button = item.querySelector(".faq-question");
@@ -176,21 +318,22 @@ if (interestForm && formNote) {
     const channel = document.querySelector("#contact-channel")?.value.trim() || "";
     const message = document.querySelector("#contact-message")?.value.trim() || "";
 
-    if (!name || !neighborhood || !reason) {
-      formNote.textContent = "Add your name, neighborhood, and reason first so the request is complete.";
+    if (!name || !channel || !neighborhood || !reason) {
+      formNote.textContent =
+        "Add your name, phone or email, neighborhood, and request type first so Saturn can reply properly.";
       return;
     }
 
-    const subject = encodeURIComponent(`Saturn coverage request | ${name}`);
+    const subject = encodeURIComponent(`Saturn request | ${reason} | ${name}`);
     const body = encodeURIComponent(
       [
         `Name: ${name}`,
+        `Phone or email: ${channel}`,
         `Neighborhood: ${neighborhood}`,
-        `Reason: ${reason}`,
-        `Best reply channel: ${channel || "Not provided"}`,
+        `Request type: ${reason}`,
         "",
-        "Message:",
-        message || "No extra message provided.",
+        "Details:",
+        message || "No extra details provided.",
       ].join("\n")
     );
 
